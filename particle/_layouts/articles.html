@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  {% include head.html %}
+  <body>
+    {% include navigation.html %}
+    {{ content }}
+    <section id="articles">
+      {% include post.html %}
+    </section>
+  </body>
+</html>

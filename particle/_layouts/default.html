@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include navigation.html %}
+      {{ content }}
+  {% include head.html %}
+  <body>
+      {% include header.html %}
+      <section id="about">
+        {% include about.html %}
+      </section>
+      <section id="projects">
+        {% include projects.html %}
+      </section>
+      <section id="blog">
+        {% include blog.html %}
+      </section>
+        {{ content }}
+      {% include footer.html %}
+  </body>
+</html>
+
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
