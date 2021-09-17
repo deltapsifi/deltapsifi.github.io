@@ -1,0 +1,6 @@
+do something with the for loop in projects.html
+complete the posts
+add more posts
+get a good theme for the background when we cick on posts
+make a separate page for just the atricles like u have already done for posts
+add about me 
