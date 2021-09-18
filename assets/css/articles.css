@@ -1,0 +1,14 @@
+body {
+    color: rgb(99, 33, 206);
+    background: #2C2F33;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+  }

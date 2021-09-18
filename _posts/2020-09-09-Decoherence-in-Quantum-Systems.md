@@ -22,4 +22,6 @@ Now in order to understand decoherence let’s consider the system to be in supe
 probability of \|0> = 1/2
 probability of \|1> = 1/2
 
-If we add a complex number e^iθ then it will not affect the probabilities because if it’s product with it’s conjugate will be 1.
+If we add a complex number $$ \exp^{iθ} $$ then it will not affect the probabilities because if it’s product with it’s conjugate will be 1.
+
+$$ \frac{cos(x)}_{sin(x)} $$

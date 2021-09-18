@@ -1,13 +1,15 @@
 <!doctype html>
 <html>
+  {% include sidebar.html %}
   {% include navigation.html %}
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>
+      <h1 style="text-align:center;">{{ page.title }}</h1>
+    </title>
   </head>
-  {% include head.html %}
-  {% include header.html %}
+  {% include styles.html %}
   <body>
-    {{ content }}
+    <p>{{ content }}</p>
   </body>
 </html>

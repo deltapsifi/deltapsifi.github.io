@@ -12,6 +12,26 @@ email: deltapsifi@outlook.com
 github_username:  deltapsifi
 author: ΔΨφ
 
+sidebars:
+  - title: Home
+    url: /
+  - title: Articles
+    subfolderitems:
+      - page: Condensed Matter Physics
+        url: 
+      - page: Quantum Mechanics
+        url: 
+      - page: Quantum Computing
+        url: 
+      - page: Advanced Math
+        url:
+      - page: Standard Model
+        url: 
+  - title: About Me
+    url: /about.html
+  - title: Contact Me
+    url: 
+
 
 # Google-analytics
 google-analytics:
