@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <nav>
-  <a href="/">Home</a>
-  <a href="/about.html">About</a>
-  <a href="/blog.html">Articles</a>
-</nav>
       
   <head>
   <meta charset="utf-8">
@@ -18,35 +13,44 @@
 </head>
 
   <body>
-      <div id="particles-js">
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
+      <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<div id="particles-js">
   <div class="header">
       <h1>
         <span class="site-title">ΔΨφ</span>
         <span class="site-description">Editor-in-Chief</span>
       </h1>
       <div class="header-icons">
-        <a aria-label="Send email" href="#"><i class="icon fa fa-envelope"></i></a>
-        <a aria-label="My Github" target="_blank" href="https://github.com/deltapsifi"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+        <a aria-label="deltapsifi@outlook.com" href="#"><i class="icon fa fa-envelope"></i></a>
+        <a aria-label="My Github" target="_blank" href="https://github.com/deltapsifi"><i class="icon fab fa-github" aria-hidden="true"></i></a>
+        <a aria-label="My Discord Server" target="_blank" href="https://discord.gg/c2Zee55e83"><i class="icon fab fa-discord" aria-hidden="true"></i></a>
       </div>
       <div class="header-links">
         <a class="link" href="#about" data-scroll>About Me</a>
-        <a class="link" href="#blog" data-scroll>Latest Posts</a>
-        <a class="link" href="#projects" data-scroll>articles</a>
+        <a class="link" href="#projects" data-scroll>Latest Posts</a>
       </div>
   </div>
   <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
 </div>
-
       <section id="about">
          <div class="user-details">
   <h1> Know about your Editor-in-Chief </h1>
   <p> I love physics and math </p>
+  <p>
+    <i class="icon fab fa-discord"><i class="icon fa fa-chevron-right">ΔΨφ#4993</i></i>
+  </p>
 </div>
 <div><h2>Projects and Education</h2></div>
   <div class="user">
     <div class="tech">
       <h3>Pegasus</h3>
       <i class="devicon-html5-plain-wordmark"></i>
+      <i class="devicon-travis-plain-wordmark"></i>
       <i class="devicon-bootstrap-plain-wordmark colored"></i>
       <i class="devicon-sass-original colored"></i>
       <p>
@@ -56,6 +60,10 @@
     <div class="tech">
       <h3>Code</h3>
       <i class="devicon-javascript-plain colored"></i>
+      <i class="devicon-github-original"></i>
+      <i class="devicon-github-plain-wordmark"></i>
+      <i class="devicon-github-plain"></i>
+      <i class="devicon-github-original-wordmark"></i>
       <i class="devicon-react-original-wordmark colored"></i>
       <i class="devicon-nodejs-plain-wordmark"></i>
       <p>some description</p>
@@ -72,7 +80,7 @@
       </section>
       <section id="projects">
         <div class="user-details">
-  <h1> Articles </h1>
+  <h1> Latest Posts </h1>
   <div class="user-projects">
     <div class="images-right">
       <img alt="mountains" src="/assets/img/mountains.jpg" />
@@ -114,7 +122,7 @@
   </div>
   <div class="user-projects"> 
     <div class="images-right"> 
-      <img alt="skate" src="/assets/img/QE.jpg" /> 
+      <img alt="skate" src="/assets/img/QE.jpg" width="300" height="400"/> 
     </div> 
     <div class="contents"> 
       <h3> Spooky Action at a Distance </h3> 
@@ -136,22 +144,34 @@
       <a class="project-link" href="/2020-09-30-The-Fourier-Transform.md/">Check it out</a> 
     </div> 
   </div>
-  <div class="user-projects"> 
-    <div class="images-right"> 
-      <img alt="cat" src="/assets/img/cat.jpg" /> 
-    </div> 
-    <div class="contents"> 
-      <h3> Quantum Superposition </h3> 
-      <p>
-        <p>
-          Every physical quantity has a Hermitian operator associated with it and the linear combination of the eigenstates of this operator gives us Quantum Superposition.
-        </p>
-      </p> 
-      <a class="project-link" href="/2020-11-12-Quantum-Superposition.md/">Check it out</a> 
-    </div> 
+
+  <div>
+    <p>
+      ------------------------------------------------------------------------------------------------------------------------------------------------------------
+    </p>
+    <p>
+      <h3><p>If you want to enjoy yourself, don't forget to see my blog</p></h3>
+    </p>
+    <a class="project-link" href="blog.html">Blog</a>
   </div>
       </section>
         
+      <div>
+    <style>
+        .arrow {
+            border: solid rgb(0, 0, 0);
+            border-width: 0 7px 7px 0;
+            padding: 5px;
+            cursor: pointer;
+            display: inline-block;
+            }
+            .up {
+                transform: rotate(-135deg);
+                -webkit-transform: rotate(-135deg);
+                }
+    </style>
+    <p style="position: absolute; right: 200px;"><a onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Go To Top" id="arrow" class="arrow up"></a></p>
+</div>
       <footer class="footer">
     <p>&copy; <a href="https://github.com/deltapsifi">ΔΨφ</a></p>
 </footer>

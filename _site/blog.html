@@ -3,13 +3,88 @@
 <title>ΔΨφ</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="/assets/css/blog.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
 <body class="w3-light-grey">
+  <style>
+    a {
+      text-decoration: none;
+    }
+  </style>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<style>
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  a:hover {
+    color:rgb(179, 168, 168);
+  }
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+.container {
+  display: inline;
+  cursor: pointer;
+}
 
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-10px, 5px);
+  transform: rotate(-45deg) translate(-10px, 5px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-9px, -6px);
+  transform: rotate(45deg) translate(-9px, -6px);
+}
+</style>
+<body>
+  <button class=".bar1,.bar2,.bar3"><div class="container" onclick="myFunction(this)"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div></i></button>
+  <div class="panel">
+    <ul style="list-style: none;">
+      <li><a href="/">Home</a></li>
+      <li><a href="">Contact Me</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+    </ul>
+  </div>
+  <script>
+    var acc = document.getElementsByClassName(".bar1,.bar2,.bar3");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    function myFunction(x) {
+      x.classList.toggle("change");
+    }
+    </script>
+</body>
 <!-- w3-content defines a container for fixed size centered content, 
 and is wrapped around the whole page content, except for the footer in this example -->
 <div class="w3-content" style="max-width:1400px">
@@ -19,6 +94,22 @@ and is wrapped around the whole page content, except for the footer in this exam
   <h1><b>ΔΨφ</b></h1>
   <p>Welcome to my blog</p>
 </header>
+
+<style>
+  .btn {
+    background-color: #020613;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.2;
+    transition: 0.3s;
+  }
+  .btn:hover {opacity: 1}
+
+</style>
 
 <!-- Grid -->
 <div class="w3-row">
@@ -46,22 +137,6 @@ and is wrapped around the whole page content, except for the footer in this exam
 
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
-  <img src="/assets/img/QE.jpg" alt="Mountains" style="width:100%">
-    <div class="w3-container">
-      <h3><b>Spooky Action at a Distance</b></h3>
-      <h5>Posted on <span class="w3-opacity">September 11, 2020</span></h5>
-    </div>
-
-    <div class="w3-container">
-      <p><strong>“Quantum Entanglement”</strong> or as described by our friend Albert :- “spooky action at a distance” is a phenomenon in which the quantum states of two or more particles have to be described with reference to each other.</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <a class="w3-button w3-padding-large w3-white w3-border" href="/2020-09-11-Spooky-Action-at-a-Distance.md/">READ MORE »</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="w3-card-4 w3-margin w3-white">
     <img src="/assets/img/stab.jpg" alt="Model" style="width:100%">
       <div class="w3-container">
         <h3><b>The Standard Model - An Introduction</b></h3>
@@ -77,6 +152,22 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
       </div>
     </div>
+  <div class="w3-card-4 w3-margin w3-white">
+  <img src="/assets/img/QE.jpg" alt="Mountains" style="width:100%">
+    <div class="w3-container">
+      <h3><b>Spooky Action at a Distance</b></h3>
+      <h5>Posted on <span class="w3-opacity">September 11, 2020</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p><strong>“Quantum Entanglement”</strong> or as described by our friend Albert :- “spooky action at a distance” is a phenomenon in which the quantum states of two or more particles have to be described with reference to each other.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <a class="w3-button w3-padding-large w3-white w3-border" href="/2020-09-11-Spooky-Action-at-a-Distance.md/">READ MORE »</a>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- END BLOG ENTRIES -->
 </div>
 
@@ -97,7 +188,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <h4>Popular Posts</h4>
     </div>
     <ul class="w3-ul w3-hoverable w3-white">
-      <li class="w3-padding-16">
+      <li class="w3-padding-16" href="/2020-09-30-The-Fourier-Transform.md/">
         <img src="/assets/img/cat.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
         <span class="w3-large"><strong>Parallel Universes</strong></span><br>
         <p>Whenever a particle gets entangled with the environment it undergoes decoherence due to which our universe branches into what we call a Parallel Universe, also called the Many Worlds Interpretation</p>
@@ -131,7 +222,34 @@ and is wrapped around the whole page content, except for the footer in this exam
 </div>
 
 <!-- Footer -->
+<style>
+  p {
+    text-align: center;
+  }
+  a:hover{
+    color: #000;
+  }
+</style>
+<div>
+    <style>
+        .arrow {
+            border: solid rgb(0, 0, 0);
+            border-width: 0 7px 7px 0;
+            padding: 5px;
+            cursor: pointer;
+            display: inline-block;
+            }
+            .up {
+                transform: rotate(-135deg);
+                -webkit-transform: rotate(-135deg);
+                }
+    </style>
+    <p style="position: absolute; right: 200px;"><a onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Go To Top" id="arrow" class="arrow up"></a></p>
+</div>
 <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <p>
+    &copy; <a class="footer" href="https://github.com/deltapsifi">ΔΨφ</a>
+  </p>
 </footer>
 
 </body>
