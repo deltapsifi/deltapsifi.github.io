@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
   <style>
   a {
     color: black;
     font-size: x-large;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
   }
   a:hover {
@@ -17,11 +19,29 @@
   <a href="/blog.html" style="margin:3em">Blog</a>
 </ul>
   <head>
+    <style>
+      .container {
+    background:rgba(255, 255, 255, 0.664);
+    width:150px;
+    height:40px;
+    font-size:15px;
+    color:black;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+      .content {
+     max-width: 600px;
+     margin-left: 500px;
+}
+    </style>
     <meta charset="utf-8">
     <title>
       ΔΨφ
     </title>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/assets/css/sid.css">
 <style>
   a {
     text-decoration: none;
@@ -30,68 +50,34 @@
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   a:hover {
-    color:rgb(179, 168, 168);
+    color:brown;
   }
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-}
-.container {
-  display: inline;
-  cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-10px, 5px);
-  transform: rotate(-45deg) translate(-10px, 5px);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-9px, -6px);
-  transform: rotate(45deg) translate(-9px, -6px);
-}
 </style>
-<body>
-  <button class=".bar1,.bar2,.bar3"><div class="container" onclick="myFunction(this)"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div></i></button>
-  <div class="panel">
-    <ul style="list-style: none;">
-      <li><a href="/">Home</a></li>
-      <li><a href="">Contact Me</a></li>
-      <li><a href="/blog.html">Blog</a></li>
-    </ul>
+
+  <!-- Sidebar -->
+  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large" style="font-size: xx-large;">Close &times;</button>
+    <a href="/" class="w3-bar-item w3-button">Home</a>
+    <a href="" class="w3-bar-item w3-button">Contact Me</a>
+    <a href="/blog.html" class="w3-bar-item w3-button">Blog</a>
   </div>
+  
+  <!-- Page Content -->
+  <div class="w3-black">
+    <button class="w3-button w3-black w3-xlarge" onclick="w3_open()">☰</button>
+  </div>
+  
   <script>
-    var acc = document.getElementsByClassName(".bar1,.bar2,.bar3");
-    var i;
-    
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
-      });
-    }
-    function myFunction(x) {
-      x.classList.toggle("change");
-    }
-    </script>
-</body>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
+       
+  </body>
   </head>
   <head>
     <meta charset="utf-8">
@@ -103,8 +89,9 @@
   
     <link rel="stylesheet" href="/assets/css/articles.css">
   </head>
-  <body>
-    <p><h1>The Standard Model An Introduction</h1>
+  <div class="content">
+    <div class="container">
+      <span><h1>The Standard Model An Introduction</h1>
 <p>Posted on 21 Mar 2021 by ΔΨφ</p>
 
 <p>This post is the first in a series of posts about the Standard Model of Particle Physics, so stay tuned 😉. And remember this is just an introduction. “<strong>What is matter made of ?</strong>” was the question that was keeping our ancient Greek and Indian philosophers up at night, until the origin of atomic theory. This theory is said to have been introduced by philosophers Leucippus and Democritus in Greece (around 5th Century BC) and is also said to have origins in ancient India. Then with time both experimental and theoretical proof led to the speculation regarding the existence of atoms and molecules and in the late 19th Century atoms were finally defined.</p>
@@ -114,8 +101,9 @@
 
 <p>It was also found that just like the electron there were two more particles with very similar properties. The only different is that they were heavier than the electron. The heaviest one was named <strong>“Tau”</strong> and the other was named <strong>“Muon“</strong>. Analogous to these three particles three more particles were discovered and they were so similar to these that they were named after them, they are – <strong>Electron Neutrino, Muon Neutrino</strong> and <strong>Tau Neutrino</strong> (in increasing order of mass). These 6 particles were together grouped and called as <strong>Leptons</strong>. These were all grouped together because all these particles have half integer spin (+1/2 or -1/2) and also because they are very similar to each other in their respective properties. All the Leptons along with the Quarks are named as Fermions and these consist the of the Fundamental particles.</p>
 
-        </p>
-  </body>
+        </span>
+    </div>
+  </div>
   <div>
     <style>
         .arrow {
