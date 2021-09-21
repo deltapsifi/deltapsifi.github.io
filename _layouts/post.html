@@ -3,7 +3,19 @@ layout: articles
 ---
 
 <h1>{{ page.title }}</h1>
-<p>Posted on {{ page.date | date_to_string }} by <a href="default.html">{{ page.author }}</a></p>
+<style>
+    .specli {
+        text-decoration:none;
+    }
+    .specli:hover {
+        text-decoration-color: darkred;
+        text-decoration-line: underline;
+    }
+</style>
+<p>Posted on {{ page.date | date_to_string }} by <a class="specli" href="default.html">{{ page.author }}</a></p>
 
 {{ content }}
+{% for tag in page.tags %}
+<a class="project-link" href="#">{{ tag }}</a>
+{% endfor %}
         

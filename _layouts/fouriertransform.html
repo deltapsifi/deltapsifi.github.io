@@ -64,24 +64,24 @@ layout: articles
 
 <p>\[ f(t) = D_{-n}e^{-2\pi int} ……… D_me^{2\pi imt} ………. D_{n} e^{2\pi int}\]</p>
 
-<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-23.png?w=488" alt="" /></p>
+<p>\[ D_{m}e^{2 \pi imt} = f(t) - \sum_{k \not = m}D_{k}e^{2 \pi ikt}  \] </p>
 
 <p>I separated the mth term and then got this equation.</p>
 
 <p>Let’s take the exponential term to the other side of the equation.</p>
 
-<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-25.png?w=622" alt="" /></p>
+<p>\[ D_{m} = e^{-2\pi imt} f(t) - D_{k} e^{2\pi i(k-m)t} \]</p>
 
 <p>Now we will integrate this equation from 0 to 1 on both sides.</p>
 
-<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-28.png?w=795" alt="" /></p>
+<p>\[ \int_{0}^{1} D_{m} \sdot dt = \int_{0}^{1} e^{-2\pi imt}f(t) \sdot dt - \sum_{k \not = m}D_{k} \int_{0}^{1} e^{2\pi i(k-m)t} \sdot dt \]</p>
 
-<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-29.png?w=737" alt="" /></p>
+<p>\[ D_{m} = \int_{0}^{1} e^{-2\pi imt}f(t) \sdot dt - \sum_{k \not = m} D_{k} \frac{1}{e^{2\pi i(k-m)}} e^{2\pi i(k-m)t} ]_{0}^{1} \]</p>
 
 <p>Now let’s evaluate the last term from 0 to 1. When t = 0, only the fraction part is left because \( e^{0} = 1\). When t = 1, we get \(e^{2 \pi i(k-m)}\). “(k-m)” is an integer so we essentially have \(e^{2 \pi i}=cos(2\pi)+isin(2\pi).\)</p> 
 <p>\(sin(2 \pi) = 0\) and \(cos(2 \pi) = 1\), so we again have the fraction part left as follows :</p>
 
-<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-30.png?w=779" alt="" /></p>
+<p>\[ D_{m} = \int_{0}^{1} e^{-2\pi imt}f(t) \sdot dt - \sum_{k \not = m} D_{k} (\frac{1}{e^{2\pi i(k-m)}} - \frac{1}{e^{2\pi i(k-m)}}) \] </p>
 
 <p>Therefore, the last term results to 0</p>
 
@@ -91,9 +91,9 @@ layout: articles
 
 <p>(I have made a tiny change in this equation : replacing “m” with “k”.)</p>
 
-<p>Thus, in order to write a general periodic function of the form \( f(t) = \sum_{k = -n}^{n} D_k e^{2\pi ikt}\) , the coefficient – \( D_k\) – has to be given by the formula : \( D_k = \int_{0}^{1} e^{-2\pi ikt} f(t) \cdot dt \)</p>
+<p>Thus, in order to write a general periodic function of the form \( f(t) = \sum_{k = -n}^{n} D_k e^{2\pi ikt}\) , the coefficient – \( D_k\) – has to be given by the formula : </p>
+
+<p>\[ D_k = \int_{0}^{1} e^{-2\pi ikt} f(t) \cdot dt \]</p>
 
 <p>However, our work is not yet done, we need to verify this again. So stay tuned for Fourier Transform - 2.</p>
-
-        </p>
   </body>

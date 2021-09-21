@@ -3,25 +3,64 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-  <ul>
-  <a href="/" style="margin-right: 100px">Home</a>
-  <a href="/about.html" style="margin:100px">About</a>
-  <a href="/blog.html" style="margin:3em">Blog</a>
+  <ul class="nav">
+  <li><a href="/">Home</a></li>
+  <li><a href="/about.html">About</a></li>
+  <li><a href="/blog.html">Blog</a></li>
 </ul>
+
+<style>
+.nav{
+    list-style:none;
+    margin:0em;
+    padding:0;
+    text-align:center;
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+    margin-left: 5em;
+    margin-right: 5em; 
+}
+
+</style>
   <head>
     <style>
+      body {
+        font-size: x-large;
+      }
+      .project-link{
+          display:inline-block;
+          margin:10px 0;
+          padding:5px;
+          color:#1a222c;
+          background-color:transparent;
+          border:1px solid #1a222c;
+          border-radius:10px;
+          text-align:center;
+          outline:0;
+          text-decoration:none;
+          cursor:pointer;
+          transition:color .3s ease-out,background-color .3s ease-out,border-color .3s ease-out
+          }
+          .project-link:active,.project-link:hover{
+              background-color:#54516a;
+              border-color:#54516a;
+              color:#fff;
+              transition:color .3s ease-in,background-color .3s ease-in,border-color .3s ease-in
+          }
       .container {
     background:rgba(255, 255, 255, 0.664);
     width:max-content;
     height:fit-content;
     font-size:15px;
-    color:black;
+    color:#54516a;
     text-align: center;
     vertical-align: middle;
-}
-      .content {
-     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+      }
     </style>
     <meta charset="utf-8">
     <title>
@@ -33,6 +72,7 @@
 <style>
   a {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #54516a;
   }
 </style>
 
@@ -66,15 +106,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Spooky Action At A Distance</title>
+    <title>Spooky Action at a Distance</title>
     <meta name="description" content="A blog featuring Physics and Advanced Math, focusing mainly on Particle Physics and Quantum Computing">
   
     <link rel="stylesheet" href="/assets/css/articles.css">
   </head>
   <div class="content">
     <div class="container">
-      <span><h1>Spooky Action At A Distance</h1>
-<p>Posted on 11 Sep 2020 by <a href="default.html">ΔΨφ</a></p>
+      <span><h1>Spooky Action at a Distance</h1>
+<style>
+    .specli {
+        text-decoration:none;
+    }
+    .specli:hover {
+        text-decoration-color: darkred;
+        text-decoration-line: underline;
+    }
+</style>
+<p>Posted on 10 Nov 2020 by <a class="specli" href="default.html">ΔΨφ</a></p>
 
 <p>“Quantum Entanglement” or as described by our friend Albert :- “spooky action at a distance” is a phenomenon in which the quantum states of two or more particles have to be described with reference to each other.</p>
 
@@ -90,6 +139,11 @@ We all have heard about the Pauli’s exclusion principle, it suggests that no 2
 <p>The Schrödinger’s cat experiment is also an example of entanglement. It is believed that if we conduct 2 such experiments and move both the boxes to different ends of the universe we will always end up with an outcome wherein one cat is alive and the other is dead.</p>
 
 <p>In conclusion, during entanglement the entangled particles continue to interact with each other regardless of their separation. They interact through the transfer of Quantum Information. In entanglement the quantum systems of the particles get linked and they have the same wavefunction.</p>
+
+
+<a class="project-link" href="#">Entanglement</a>
+
+<a class="project-link" href="#">Quantum Mechanics</a>
 
         </span>
     </div>

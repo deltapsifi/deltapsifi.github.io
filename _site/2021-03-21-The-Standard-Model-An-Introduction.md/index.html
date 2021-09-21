@@ -3,25 +3,64 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-  <ul>
-  <a href="/" style="margin-right: 100px">Home</a>
-  <a href="/about.html" style="margin:100px">About</a>
-  <a href="/blog.html" style="margin:3em">Blog</a>
+  <ul class="nav">
+  <li><a href="/">Home</a></li>
+  <li><a href="/about.html">About</a></li>
+  <li><a href="/blog.html">Blog</a></li>
 </ul>
+
+<style>
+.nav{
+    list-style:none;
+    margin:0em;
+    padding:0;
+    text-align:center;
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+    margin-left: 5em;
+    margin-right: 5em; 
+}
+
+</style>
   <head>
     <style>
+      body {
+        font-size: x-large;
+      }
+      .project-link{
+          display:inline-block;
+          margin:10px 0;
+          padding:5px;
+          color:#1a222c;
+          background-color:transparent;
+          border:1px solid #1a222c;
+          border-radius:10px;
+          text-align:center;
+          outline:0;
+          text-decoration:none;
+          cursor:pointer;
+          transition:color .3s ease-out,background-color .3s ease-out,border-color .3s ease-out
+          }
+          .project-link:active,.project-link:hover{
+              background-color:#54516a;
+              border-color:#54516a;
+              color:#fff;
+              transition:color .3s ease-in,background-color .3s ease-in,border-color .3s ease-in
+          }
       .container {
     background:rgba(255, 255, 255, 0.664);
     width:max-content;
     height:fit-content;
     font-size:15px;
-    color:black;
+    color:#54516a;
     text-align: center;
     vertical-align: middle;
-}
-      .content {
-     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+      }
     </style>
     <meta charset="utf-8">
     <title>
@@ -33,6 +72,7 @@
 <style>
   a {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #54516a;
   }
 </style>
 
@@ -74,7 +114,16 @@
   <div class="content">
     <div class="container">
       <span><h1>The Standard Model An Introduction</h1>
-<p>Posted on 21 Mar 2021 by <a href="default.html">ΔΨφ</a></p>
+<style>
+    .specli {
+        text-decoration:none;
+    }
+    .specli:hover {
+        text-decoration-color: darkred;
+        text-decoration-line: underline;
+    }
+</style>
+<p>Posted on 21 Mar 2021 by <a class="specli" href="default.html">ΔΨφ</a></p>
 
 <p>This post is the first in a series of posts about the Standard Model of Particle Physics, so stay tuned 😉. And remember this is just an introduction. “<strong>What is matter made of ?</strong>” was the question that was keeping our ancient Greek and Indian philosophers up at night, until the origin of atomic theory. This theory is said to have been introduced by philosophers Leucippus and Democritus in Greece (around 5th Century BC) and is also said to have origins in ancient India. Then with time both experimental and theoretical proof led to the speculation regarding the existence of atoms and molecules and in the late 19th Century atoms were finally defined.</p>
 
@@ -82,6 +131,7 @@
 <em>(Protons are made up of two Up and one Down quark and neutrons are made up of two Down and one Up quark.)</em></p>
 
 <p>It was also found that just like the electron there were two more particles with very similar properties. The only different is that they were heavier than the electron. The heaviest one was named <strong>“Tau”</strong> and the other was named <strong>“Muon“</strong>. Analogous to these three particles three more particles were discovered and they were so similar to these that they were named after them, they are – <strong>Electron Neutrino, Muon Neutrino</strong> and <strong>Tau Neutrino</strong> (in increasing order of mass). These 6 particles were together grouped and called as <strong>Leptons</strong>. These were all grouped together because all these particles have half integer spin (+1/2 or -1/2) and also because they are very similar to each other in their respective properties. All the Leptons along with the Quarks are named as Fermions and these consist the of the Fundamental particles.</p>
+
 
         </span>
     </div>

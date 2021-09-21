@@ -3,25 +3,64 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-  <ul>
-  <a href="/" style="margin-right: 100px">Home</a>
-  <a href="/about.html" style="margin:100px">About</a>
-  <a href="/blog.html" style="margin:3em">Blog</a>
+  <ul class="nav">
+  <li><a href="/">Home</a></li>
+  <li><a href="/about.html">About</a></li>
+  <li><a href="/blog.html">Blog</a></li>
 </ul>
+
+<style>
+.nav{
+    list-style:none;
+    margin:0em;
+    padding:0;
+    text-align:center;
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+    margin-left: 5em;
+    margin-right: 5em; 
+}
+
+</style>
   <head>
     <style>
+      body {
+        font-size: x-large;
+      }
+      .project-link{
+          display:inline-block;
+          margin:10px 0;
+          padding:5px;
+          color:#1a222c;
+          background-color:transparent;
+          border:1px solid #1a222c;
+          border-radius:10px;
+          text-align:center;
+          outline:0;
+          text-decoration:none;
+          cursor:pointer;
+          transition:color .3s ease-out,background-color .3s ease-out,border-color .3s ease-out
+          }
+          .project-link:active,.project-link:hover{
+              background-color:#54516a;
+              border-color:#54516a;
+              color:#fff;
+              transition:color .3s ease-in,background-color .3s ease-in,border-color .3s ease-in
+          }
       .container {
     background:rgba(255, 255, 255, 0.664);
     width:max-content;
     height:fit-content;
     font-size:15px;
-    color:black;
+    color:#54516a;
     text-align: center;
     vertical-align: middle;
-}
-      .content {
-     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+      }
     </style>
     <meta charset="utf-8">
     <title>
@@ -33,6 +72,7 @@
 <style>
   a {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #54516a;
   }
 </style>
 
@@ -73,118 +113,75 @@
   </head>
   <div class="content">
     <div class="container">
-      <span><h1>Decoherence in Quantum Systems</h1>
-<p>Posted on 09 Sep 2020 by <a href="default.html">ΔΨφ</a></p>
+      <span></body>
+</head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Decoherence in Quantum Systems</title>
+    <meta name="description" content="A blog featuring Physics and Advanced Math, focusing mainly on Particle Physics and Quantum Computing">
+  
+    <link rel="stylesheet" href="/assets/css/post.css">
+  </head>
+  <body>
+  <p><h1>Decoherence in Quantum Systems</h1></p>
+<p>Posted on 09 Sep 2020 by ΔΨφ</p>
 
 <p>In Quantum Mechanics we define Quantum Systems by using the wavefunction (Ψ), which is a vector.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>For example : - **</td>
-      <td>Ψ&gt; = a</td>
-      <td>0&gt; + b</td>
-      <td>1&gt; + c</td>
-      <td>2&gt; ……….**</td>
-    </tr>
-  </tbody>
-</table>
+<p>For example : - <strong>\( |\Psi> = a |0> + b |1> + c |2> ..... \)</strong></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>Here what we write in “<strong>ket</strong>” notation (</td>
-      <td>&gt;) are the possible quantum states and their coefficients are the probabilities for the particular states; these coefficients are complex numbers.</td>
-    </tr>
-  </tbody>
-</table>
+<p>Here what we write in “<strong>ket</strong>” notation (\(|>\)) are the possible quantum states and their coefficients are the probabilities for the particular states; these coefficients are complex numbers.</p>
 
 <p>According to the <strong>Born Interpretation</strong> the square of the coefficients are the probabilities and also the sum of all the probabilities is 1. Let’s take an example :</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>**</td>
-      <td>Ψ&gt; = a</td>
-      <td>0&gt; + b</td>
-      <td>1&gt;**</td>
-    </tr>
-  </tbody>
-</table>
+<p><strong>\[|\Psi> = a|0> + b|1>\]</strong></p>
 
-<p>now the probability of measuring state 0 = a.a*</p>
+<p>now the probability of measuring state \(0 = a \sdot a^*\)</p>
 
-<p>and the probability of measuring state 1 = b.b*</p>
+<p>and the probability of measuring state \(1 = b \sdot b^*\)</p>
 
 <p>* = complex conjugate</p>
 
 <p>Now in order to understand decoherence let’s consider the system to be in superposition.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>**</td>
-      <td>Ψ&gt; = (1/√2)</td>
-      <td>0&gt; + (1/√2)</td>
-      <td>1&gt;**</td>
-    </tr>
-  </tbody>
-</table>
+<p><strong>\[|\Psi> = (1/√2) |0> + (1/√2) |1>\]</strong></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>probability of</td>
-      <td>0&gt; = 1/2</td>
-    </tr>
-  </tbody>
-</table>
+   <p>probability of 0 = 1/2</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>probability of</td>
-      <td>1&gt; = 1/2</td>
-    </tr>
-  </tbody>
-</table>
+<p>probability of 1 = 1/2</p>
 
 <p>If we add a complex number eiθ then it will not affect the probabilities because if it’s product with it’s conjugate will be 1.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>Now, **$latex\ket{\Psi}</td>
-      <td>Ψ&gt; = (1/√2)</td>
-      <td>0&gt; + (1/√2) \exp{iθ}</td>
-      <td>1&gt;$**</td>
-    </tr>
-  </tbody>
-</table>
+<p>Now, <strong>\( |\Psi> = (1/√2) |0> + (1/√2) e^{iθ}|1> \)</strong></p>
 
 <p>We insert this complex number to signify the phase of the system.</p>
 
 <p><strong>Density Matrices</strong> contain all the (accessible) information about a quantum mechanical system. These take the role of the state vectors discussed so far. A density matrix (<strong>ρ</strong>) is the <strong>ket-bra product</strong> of the wavefunctions.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td><strong>ρ</strong> **=</td>
-      <td>Ψ&gt;&lt;Ψ</td>
-      <td>= <img src="images/image-1.png" alt="" />**</td>
-    </tr>
-  </tbody>
-</table>
+<p>\[ \rho = {|\Psi >< \Psi|} = \begin{pmatrix} 1/2 & 1/2e^{-i \theta} \\ 1/2e^{i \theta} & 1/2 \end{pmatrix} \]</p>
 
 <p>Each time the particle bumps into another particle the phase of the system randomly changes and what we actually measure is the average of all these phase changes. Now if we visualize a complex plane every number with an absolute value of 1 lies on a circle and if we take the average then we find that it is not on the circle but at center of the circle i.e. at 0. This means that the phase factors in the matrix become 0. The density matrix now is :</p>
 
-<p><strong>ρ</strong> = <img src="images/image-2.png" alt="" /></p>
+<p>\[ \rho = \begin{pmatrix} 1/2 & 0 \\ 0 & 1/2 \end{pmatrix} \] </p>
 
 <p>As the phase becomes 0, it destroys the ability of the state to make an interference pattern with itself. What does this decohered density matrix tell us? It tells us the classical probability of each of the states this is because the quantum characteristic of the system has gone away since the phase is 0. So decoherence converts quantum probabilities to classical probabilities. It is necessary to realize that decoherence merely gives us probabilities for what we observe. Decoherence is the only reason we don’t see strange quantum behaviour (as observed at the quantum level) because this behaviour goes away with all the interactions of the particles, regardless of the fact whether we measure them or not. For example, when we open the box in Schrödinger’s cat experiment, we don’t see that the cat is both dead and alive or after a coin toss, we don’t see that we have both heads and tails, thanks to decoherence we only see one outcome, otherwise imagine how strange and different the universe would be.</p>
 
 <p><strong>This, my friends is DECOHERENCE !</strong></p>
 
+
+<a class="project-link" href="#">Decoherence</a>
+
+<a class="project-link" href="#">Density Matrices</a>
+
+<a class="project-link" href="#">Quantum Mechanics</a>
+
         </span>
+    </div>
+  </div>
+  </body></span>
     </div>
   </div>
   <div>

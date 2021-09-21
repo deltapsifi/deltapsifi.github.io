@@ -1,0 +1,58 @@
+I"�<p>In Quantum Mechanics we define Quantum Systems by using the wavefunction (Ψ), which is a vector.</p>
+
+<p>For example : - <strong>Ψ&gt; = a 0&gt; + b 1&gt; + c 2&gt; ……….</strong></p>
+
+<p>Here what we write in “<strong>ket</strong>” notation (&gt;) are the possible quantum states and their coefficients are the probabilities for the particular states; these coefficients are complex numbers.</p>
+
+<p>According to the <strong>Born Interpretation</strong> the square of the coefficients are the probabilities and also the sum of all the probabilities is 1. Let’s take an example :</p>
+
+<p><strong>Ψ&gt; = a0&gt; + b1&gt;</strong></p>
+
+<p>now the probability of measuring state 0 = a.a*</p>
+
+<p>and the probability of measuring state 1 = b.b*</p>
+
+<ul>
+  <li>= complex conjugate</li>
+</ul>
+
+<p>Now in order to understand decoherence let’s consider the system to be in superposition.</p>
+
+<p><strong>Ψ&gt; = (1/√2) 0&gt; + (1/√2) 1&gt;</strong></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>probability of</td>
+      <td>0&gt; = 1/2</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>probability of</td>
+      <td>1&gt; = 1/2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If we add a complex number eiθ then it will not affect the probabilities because if it’s product with it’s conjugate will be 1.</p>
+
+<p>Now, <strong>{\Psi} Ψ&gt; = (1/√2) 0&gt; + (1/√2) \e^{iθ}1&gt;</strong></p>
+
+<p>We insert this complex number to signify the phase of the system.</p>
+
+<p><strong>Density Matrices</strong> contain all the (accessible) information about a quantum mechanical system. These take the role of the state vectors discussed so far. A density matrix (<strong>ρ</strong>) is the <strong>ket-bra product</strong> of the wavefunctions.</p>
+
+<p>ρ = Ψ&gt; Ψ = <img src="/assets/img/image-1.png" alt="" /></p>
+
+<p>Each time the particle bumps into another particle the phase of the system randomly changes and what we actually measure is the average of all these phase changes. Now if we visualize a complex plane every number with an absolute value of 1 lies on a circle and if we take the average then we find that it is not on the circle but at center of the circle i.e. at 0. This means that the phase factors in the matrix become 0. The density matrix now is :</p>
+
+<p><strong>ρ</strong> = <img src="/assets/img/image-2.png" alt="" /></p>
+
+<p>As the phase becomes 0, it destroys the ability of the state to make an interference pattern with itself. What does this decohered density matrix tell us? It tells us the classical probability of each of the states this is because the quantum characteristic of the system has gone away since the phase is 0. So decoherence converts quantum probabilities to classical probabilities. It is necessary to realize that decoherence merely gives us probabilities for what we observe. Decoherence is the only reason we don’t see strange quantum behaviour (as observed at the quantum level) because this behaviour goes away with all the interactions of the particles, regardless of the fact whether we measure them or not. For example, when we open the box in Schrödinger’s cat experiment, we don’t see that the cat is both dead and alive or after a coin toss, we don’t see that we have both heads and tails, thanks to decoherence we only see one outcome, otherwise imagine how strange and different the universe would be.</p>
+
+<p><strong>This, my friends is DECOHERENCE !</strong></p>
+:ET
