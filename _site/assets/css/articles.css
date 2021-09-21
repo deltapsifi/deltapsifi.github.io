@@ -1,14 +1,24 @@
 body {
-    color: rgb(10, 7, 0);
+    color: rgba(15, 4, 44, 0.822);
     background: offwhite;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .container {
-    width: 600px;
+    width: 1000px;
     margin: 0 auto;
 }
 
 h1 {
-    color: black;
+    color: rgb(7, 12, 90);
     text-align: center;
   }
+html {
+    color:rgb(7, 12, 90)
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: rgb(27, 6, 146);
+}
