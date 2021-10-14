@@ -1,8 +1,11 @@
 --- 
 layout: articles
 ---
-
-<h1>{{ page.title }}</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Stick No Bills' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Teko' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Viaoda Libre' rel='stylesheet'>  
+<h1 style="font-family: 'Teko';font-size: xxx-large;color:#AACCFF">{{ page.title }}</h1>
 <style>
     .specli {
         text-decoration:none;
@@ -11,8 +14,14 @@ layout: articles
         text-decoration-color: darkred;
         text-decoration-line: underline;
     }
+    p {
+        font-family: 'Viaoda Libre';
+        text-align:justify;
+        font-size: larger;
+      }
+    </style>
 </style>
-<p>Posted on {{ page.date | date_to_string }} by <a class="specli" href="default.html">{{ page.author }}</a></p>
+<a style="text-align: center;font-size: large;color: grey;font-family: 'Stick No Bills';">Posted on {{ page.date | date_to_string }} by {{ page.author }}</a>
 
 {{ content }}
 {% for tag in page.tags %}

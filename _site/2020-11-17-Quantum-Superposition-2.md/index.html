@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  <link href='https://fonts.googleapis.com/css?family=Stick No Bills' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Teko' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Viaoda Libre' rel='stylesheet'>  
+  <body style="background-color: #222233;">
+<div class="w3-black">
+    <ul class="nav" style="background-color: black;">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    </ul>
+
+    <style>
+    .nav{
+        list-style:none;
+        margin:0em;
+        padding:0;
+        text-align:center;
+    }
+    .nav li{
+        display:inline;
+        font-size: x-large;
+    }
+    .nav a{
+        display:inline-block;
+        padding:10px;
+        margin-left: 5em;
+        margin-right: 5em;
+        color:aliceblue;
+    }
+
+    </style>
+</div>
+</body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <style>
+      body {
+        font-size: x-large;
+      }
+      .project-link{
+          display:inline-block;
+          margin:10px 0;
+          padding:5px;
+          color:#AACCFF;
+          background-color:transparent;
+          border:1px solid #AACCFF;
+          border-radius:10px;
+          text-align:center;
+          outline:0;
+          text-decoration:none;
+          cursor:pointer;
+          margin: 5px;
+          transition:color .3s ease-out,background-color .3s ease-out,border-color .3s ease-out
+          }
+          .project-link:active,.project-link:hover{
+              background-color:black;
+              border-color:#54516a;
+              color:#fff;
+              transition:color .3s ease-in,background-color .3s ease-in,border-color .3s ease-in
+          }
+      .container {
+    background:rgba(255, 255, 255, 0.664);
+    width:max-content;
+    height:fit-content;
+    font-size:15px;
+    color:#AACCFF;
+    text-align: center;
+    vertical-align: middle;
+      }
+    p {
+        font-family: 'Viaoda Libre';
+        text-align:justify;
+        font-size: larger;
+      }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      color:#222233;
+      transition:color .3s ease-in
+    }
+    </style>
+    <meta charset="utf-8">
+    <title>
+      ΔΨφ
+    </title>
+  </head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Quantum Superposition - 2</title>
+    <meta name="description" content="A blog featuring Physics and Advanced Math, focusing mainly on Particle Physics and Quantum Computing">
+  
+    <link rel="stylesheet" href="/assets/css/articles.css">
+  </head>
+  <div class="content">
+    <div class="container" style="background-color:#222233;">
+      <span><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Stick No Bills' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Teko' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Viaoda Libre' rel='stylesheet'>  
+<h1 style="font-family: 'Teko';font-size: xxx-large;color:#AACCFF">Quantum Superposition - 2</h1>
+<style>
+    .specli {
+        text-decoration:none;
+    }
+    .specli:hover {
+        text-decoration-color: darkred;
+        text-decoration-line: underline;
+    }
+    p {
+        font-family: 'Viaoda Libre';
+        text-align:justify;
+        font-size: larger;
+      }
+    a {
+        text-decoration: none;
+    }
+    </style>
+</style>
+<a style="text-align: center;font-size: large;color: grey;font-family: 'Stick No Bills';">Posted on 17 Nov 2020 by ΔΨφ</a>
+
+<p></p><img src="/assets/img/1lng2gvwfhgqefn9vjkzk8a.gif" align="middle" width="700" height="400"/>
+<p></p>
+
+<p>Hello !! It is very important that you read my previous post on <a style="text-decoration: none;" href="/2020-11-12-Quantum-Superposition.md/">Quantum Superposition</a> in order to understand this.</p>
+
+<p>As promised, in this post I will be guiding you on how to make a 2-qubit quantum circuit and then create superposition between the two qubits.</p>
+
+<p>However, you must first understand what a qubit is. A qubit – short for quantum bit – is a unit of quantum information and has 2 orthogonal basis states i.e. it can be compared with the Hilbert space (H) with an orthonormalized basis states zero and one. Thus, in the general case, the qubit state is a superposition of states zero and one taken with complex coefficients.</p>
+
+<p>\[ |0> = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \]</p> 
+<p>\[ |1> = \begin{pmatrix} 0 \\ 1 \end{pmatrix} \]</p>
+
+<p>These are the two states of the qubit which can be represented by Ket vectors |0&gt; and |1&gt;</p>
+
+<p>This is the quantum state of the qubit :</p>
+
+<p>\[ |\psi > = \alpha |0> + \beta |1> \]</p>
+
+<p><strong>Qubits</strong> are generally compared to <strong>polarized photons</strong> or the <strong>spin of an electron</strong> to signify the 2 levels of a qubit. However, the qubits used to make quantum computers are artificially created by isolating two energy levels.</p>
+
+<p>(Make sure to download anaconda on your computer, here is the link : <a href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a>)</p>
+
+<p>I’ll be working with IBM’s Qiskit on Jupyter Notebook. Qiskit is an open source framework for working with quantum computers. Let’s start.</p>
+
+<p>Open your anaconda prompt and run the following command :</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>qiskit
+</code></pre></div></div>
+
+<p>Now open Jupyter Notebook and run the following commands :</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-8.png?w=465" alt="" /></p>
+
+<p>We have successfully made a quantum circuit with 2 qubits and 2 bits. We can see that both these qubits have the state |0&gt;. Let’s put a Hadamard gate on the first qubit and measure it. We already know that quantum superposition is the linear combination of 2 or more states, so let’s see that in action.</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-10.png?w=720" alt="" /></p>
+
+<p>I have applied the Hadamard gate in line 6; inside the bracket we write the qubit on which the gate is to be placed. And in the next line inside the bracket we write the qubit (to be measured) and the bit (in which the measurement is to be stored). Now let’s look at our circuit once.</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-11.png?w=417" alt="" /></p>
+
+<p>“H” is for the Hadamard gate and the speedometer looking thing signifies the measurement.</p>
+
+<p>Now let’s execute these circuits. Instead of running these circuits on an actual quantum computer I will be running them on a simulator. The simulator can be imported from “ Aer “ and the name of the simulator is “ qasm simulator “. The name “ qasm “ comes from quantum assembly language. Then we will execute the circuit and obtain the results.</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-12.png?w=642" alt="" /></p>
+
+<p>In the execute command we can also specify the number of shots i.e. the number of measurements that will be made by writing : “shots=(a number)” without the inverted commas; if you don’t specify the number of shots then by default it will run 1024 times.</p>
+<p>
+
+      <td>We will get the probability of the measurement of the state of the first qubit, initially in state</td>
+      <td>0&gt;, through a histogram.</td>
+</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-13.png?w=691" alt="" /></p>
+
+<p>
+      <td>So you can see that we get a roughly 50% probability or 0.5 for the quibit to be in state</td>
+      <td>0&gt; and</td>
+      <td>1&gt;. This error is because we are running only a limited number of shots on our simulation instead of an infinite number of shots. You don’t have to believe me you can verify this by increasing the number of shots. Although the maximum number of shots cannot exceed 1000000, we get a fair idea. Now you may be thinking that why did this guy take a 2-qubit circuit, he showed superposition with just a single qubit !</td>
+</p>
+
+<p>
+      <td>I showed you superposition in a qubit that was initially in state</td>
+      <td>0&gt;. Now we will see superposition in a qubit in state</td>
+      <td>1&gt; .</td>
+</p>
+
+<p>How will I do that ?</p>
+
+<p>You may have heard of logic gates in almost all classical programming language such as python etc. One of the most basic gate is the “NOT gate”. We have that in quantum computing too, it’s sometimes referred to as an “ X gate “. This gate changes the state of the qubit. In the same circuit, we will now work on the second qubit.</p>
+
+<p>We will start by placing an X gate and then we will place a barrier. The barrier has no physical importance it’s just used for clarity when we visualize our circuit. Speaking of which here is your code and the circuit :</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-14.png?w=745" alt="" /></p>
+<p>
+
+      <td>Now that we have the qubit in</td>
+      <td>1&gt; state, we will take the same steps that we took in the previous case : place an H gate and measure the state.</td>
+</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-15.png?w=775" alt="" /></p>
+
+<p>Now we will once again use the “qasm simulator”, execute the circuit, get the results, and visualize the probabilities though a histogram.</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-16.png?w=812" alt="" /></p>
+
+<p>See in line 20 I have taken 1000000 shots, which is the maximum number of shots that an be taken, this is the reason why we are getting absolute measurements</p>
+
+<p>Now you may be wondering what’s up with these 4 bars, in the previous case we only got 2 !</p>
+
+ <p>In this case our circuit includes 2 qubits where both the qubits, though initially in different states, are in a uniform superposition. When we execute the circuit, this entire system gets executed and we get the results for all the four possible outcomes. We can see that we get an entirely random probability : for all the four states of the system we have the probability of 0.25. The first bar, which is for the state “ 00 “, signifies that the state of the circuit in which both the qubits are in |0>; state has a probability of 0.25. Similarly, in the second bar the first qubit is in |0>; state and the second qubit is in |1>; state with 0.25 probability and the reverse of this is applicable to the third case. In the fourth case, both the qubits are in state |1>; with a probability of 0.25 . I would recommend you to make your own single qubit the circuit and perform the functions that I took in the case of the second qubit. It is necessary to understand the intuition behind this and then anyone can make a circuit and perform a variety of operations.</p>
+
+<p>Please tell me how you feel about this article and if I should make any changes. Criticism is welcome.</p>
+
+
+<a class="project-link" href="#">quantum-bits</a>
+
+<a class="project-link" href="#">quantum-computing</a>
+
+<a class="project-link" href="#">quantum-mechanics</a>
+
+<a class="project-link" href="#">quantum-superposition</a>
+
+<a class="project-link" href="#">qubits</a>
+
+        </span>
+    </div>
+  </div>
+  <div>
+    <style>
+        .arrow {
+            border: solid rgb(0, 0, 0);
+            border-width: 0 7px 7px 0;
+            padding: 5px;
+            cursor: pointer;
+            display: inline-block;
+            }
+            .up {
+                transform: rotate(-135deg);
+                -webkit-transform: rotate(-135deg);
+                }
+    </style>
+    <p style="position: absolute; right: 200px;"><a onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Go To Top" id="arrow" class="arrow up"></a></p>
+</div>
+</html>

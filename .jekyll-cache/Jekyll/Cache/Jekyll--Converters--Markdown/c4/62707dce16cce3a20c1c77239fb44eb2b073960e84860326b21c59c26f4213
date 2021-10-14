@@ -1,0 +1,132 @@
+I"�"<p><img src="/assets/img/1lng2gvwfhgqefn9vjkzk8a.gif" alt="" /></p>
+
+<p>Hello !! It is very important that you read my previous post on <a href="/2020-11-12-Quantum-Superposition.md/">Quantum Superposition</a> in order to understand this.</p>
+
+<p>As promised, in this post I will be guiding you on how to make a 2-qubit quantum circuit and then create superposition between the two qubits.</p>
+
+<p>However, you must first understand what a qubit is. A qubit – short for quantum bit – is a unit of quantum information and has 2 orthogonal basis states i.e. it can be compared with the Hilbert space (H) with an orthonormalized basis states zero and one. Thus, in the general case, the qubit state is a superposition of states zero and one taken with complex coefficients.</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-3.png?w=283" alt="" /></p>
+
+<p>These are the two states of the qubit which can be represented by Ket vectors |0&gt; and |1&gt;</p>
+
+<p>This is the quantum state of the qubit :</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-4.png?w=183" alt="" /></p>
+
+<p><strong>Qubits</strong> are generally compared to <strong>polarized photons</strong> or the <strong>spin of an electron</strong> to signify the 2 levels of a qubit. However, the qubits used to make quantum computers are artificially created by isolating two energy levels.</p>
+
+<p>(Make sure to download anaconda on your computer, here is the link : <a href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a>)</p>
+
+<p>I’ll be working with IBM’s Qiskit on Jupyter Notebook. Qiskit is an open source framework for working with quantum computers. Let’s start.</p>
+
+<p>Open your anaconda prompt and run the following command :</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>qiskit
+</code></pre></div></div>
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-17.png?w=731" alt="" /></p>
+
+<p>Now open Jupyter Notebook and run the following commands :</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">qr</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">cr</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">circuit</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">qr</span><span class="p">,</span> <span class="n">cr</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="n">circuit</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="s">'mpl'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-8.png?w=465" alt="" /></p>
+
+<p>We have successfully made a quantum circuit with 2 qubits and 2 bits. We can see that both these qubits have the state |0&gt;. Let’s put a Hadamard gate on the first qubit and measure it. We already know that quantum superposition is the linear combination of 2 or more states, so let’s see that in action.</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-10.png?w=720" alt="" /></p>
+
+<p>I have applied the Hadamard gate in line 6; inside the bracket we write the qubit on which the gate is to be placed. And in the next line inside the bracket we write the qubit (to be measured) and the bit (in which the measurement is to be stored). Now let’s look at our circuit once.</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-11.png?w=417" alt="" /></p>
+
+<p>“H” is for the Hadamard gate and the speedometer looking thing signifies the measurement.</p>
+
+<p>Now let’s execute these circuits. Instead of running these circuits on an actual quantum computer I will be running them on a simulator. The simulator can be imported from “ Aer “ and the name of the simulator is “ qasm simulator “. The name “ qasm “ comes from quantum assembly language. Then we will execute the circuit and obtain the results.</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-12.png?w=642" alt="" /></p>
+
+<p>In the execute command we can also specify the number of shots i.e. the number of measurements that will be made by writing : “shots=(a number)” without the inverted commas; if you don’t specify the number of shots then by default it will run 1024 times.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>We will get the probability of the measurement of the state of the first qubit, initially in state</td>
+      <td>0&gt;, through a histogram.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-13.png?w=691" alt="" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>So you can see that we get a roughly 50% probability or 0.5 for the quibit to be in state</td>
+      <td>0&gt; and</td>
+      <td>1&gt;. This error is because we are running only a limited number of shots on our simulation instead of an infinite number of shots. You don’t have to believe me you can verify this by increasing the number of shots. Although the maximum number of shots cannot exceed 1000000, we get a fair idea. Now you may be thinking that why did this guy take a 2-qubit circuit, he showed superposition with just a single qubit !</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>I showed you superposition in a qubit that was initially in state</td>
+      <td>0&gt;. Now we will see superposition in a qubit in state</td>
+      <td>1&gt; .</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>How will I do that ?</p>
+
+<p>You may have heard of logic gates in almost all classical programming language such as python etc. One of the most basic gate is the “NOT gate”. We have that in quantum computing too, it’s sometimes referred to as an “ X gate “. This gate changes the state of the qubit. In the same circuit, we will now work on the second qubit.</p>
+
+<p>We will start by placing an X gate and then we will place a barrier. The barrier has no physical importance it’s just used for clarity when we visualize our circuit. Speaking of which here is your code and the circuit :</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-14.png?w=745" alt="" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Now that we have the qubit in</td>
+      <td>1&gt; state, we will take the same steps that we took in the previous case : place an H gate and measure the state.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-15.png?w=775" alt="" /></p>
+
+<p>Now we will once again use the “qasm simulator”, execute the circuit, get the results, and visualize the probabilities though a histogram.</p>
+
+<p><img src="https://deltapsifi.files.wordpress.com/2020/11/image-16.png?w=812" alt="" /></p>
+
+<p>See in line 20 I have taken 1000000 shots, which is the maximum number of shots that an be taken, this is the reason why we are getting absolute measurements</p>
+
+<p>Now you may be wondering what’s up with these 4 bars, in the previous case we only got 2 !</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>In this case our circuit includes 2 qubits where both the qubits, though initially in different states, are in a uniform superposition. When we execute the circuit, this entire system gets executed and we get the results for all the four possible outcomes. We can see that we get an entirely random probability : for all the four states of the system we have the probability of 0.25. The first bar, which is for the state “ 00 “, signifies that the state of the circuit in which both the qubits are in</td>
+      <td>0&gt; state has a probability of 0.25. Similarly, in the second bar the first qubit is in</td>
+      <td>0&gt; state and the second qubit is in</td>
+      <td>1&gt; state with 0.25 probability and the reverse of this is applicable to the third case. In the fourth case, both the qubits are in state</td>
+      <td>1&gt; with a probability of 0.25 . I would recommend you to make your own single qubit the circuit and perform the functions that I took in the case of the second qubit. It is necessary to understand the intuition behind this and then anyone can make a circuit and perform a variety of operations.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Please tell me in the comments how you feel about this article and if I should make any changes. Criticism is welcome.</p>
+:ET
