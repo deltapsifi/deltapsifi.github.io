@@ -9,7 +9,7 @@ tags:
   - "quantum-mechanics"
   - "quantum-superposition"
   - "qubits"
-permalink: /2020-11-17-Quantum-Superposition-2.md/
+permalink: /Quantum-Superposition-2.md/
 ---
 
 ![](/assets/img/1lng2gvwfhgqefn9vjkzk8a.gif)

@@ -10,7 +10,7 @@ tags:
   - "residual-nuclear-force"
   - "strong-force"
   - "strong-nuclear-force"
-permalink: /2021-05-29-Fundamental-Forces-of-Nature.md/
+permalink: /Fundamental-Forces-of-Nature.md/
 ---
 As promised, I give you my next article in the standard model series!! This article will be about the fundamental interactions that take place and is extremely important in order to understand particle physics.
 

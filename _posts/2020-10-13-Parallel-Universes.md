@@ -8,7 +8,7 @@ tags:
   - "entanglement"
   - "parelleluniverses"
   - "superposition"
-permalink: /2020-10-13-Parallel-Universes.md/
+permalink: /Parallel-Universes.md/
 ---
 
 Around 13.7 billion years ago everything we know of in the cosmos was an infinitesimal singularity. Then, according to Big Bang Theory some unknown trigger ( which a few scientists believe may have been dark energy ) caused the universe to expand and the universe has been expanding ever since (though the rate of expansion is slower now as compared to that at the time of the Big Bang).

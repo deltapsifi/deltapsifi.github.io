@@ -6,7 +6,7 @@ title: "Spooky Action at a Distance"
 tags: 
   - "Entanglement"
   - "Quantum Mechanics"
-permalink: /2020-09-11-Spooky-Action-at-a-Distance.md/
+permalink: /Spooky-Action-at-a-Distance.md/
 ---
 “Quantum Entanglement” or as described by our friend Albert :- “spooky action at a distance” is a phenomenon in which the quantum states of two or more particles have to be described with reference to each other.
 

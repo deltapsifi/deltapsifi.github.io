@@ -6,7 +6,7 @@ tags:
   - "Decoherence"
   - "Density Matrices"
   - "Quantum Mechanics"
-permalink: /2020-09-09-Decoherence-in-Quantum-Systems.md/
+permalink: /Decoherence-in-Quantum-Systems.md/
 ---
 
 In Quantum Mechanics we define Quantum Systems by using the wavefunction (Ψ), which is a vector.

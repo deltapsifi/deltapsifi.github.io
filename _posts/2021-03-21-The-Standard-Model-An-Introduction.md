@@ -6,7 +6,7 @@ date: "2021-03-21"
 tags: 
   - "Particle-Physics"
   - "Standard Model"
-permalink: /2021-03-21-The-Standard-Model-An-Introduction.md/
+permalink: /The-Standard-Model-An-Introduction.md/
 ---
 
 This post is the first in a series of posts about the Standard Model of Particle Physics, so stay tuned 😉. And remember this is just an introduction.

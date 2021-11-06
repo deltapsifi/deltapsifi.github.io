@@ -9,7 +9,7 @@ tags:
   - "quantum-mechanics"
   - "schrodingers-cat"
   - "superposition"
-permalink: /2020-11-12-Quantum-Superposition.md/
+permalink: /Quantum-Superposition.md/
 ---
 
 Every physical quantity has a Hermitian operator associated with it and the linear combination of the eigenstates of this operator gives us Quantum Superposition.

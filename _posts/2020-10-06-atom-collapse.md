@@ -6,7 +6,7 @@ date: "2020-10-06"
 tags: 
   - "Atom Collapse"
   - "Condensed Matter Physics"
-permalink: /2020-10-06-atom-collapse.md/
+permalink: /atom-collapse.md/
 ---
 
 ![](https://deltapsifi.files.wordpress.com/2020/10/b43cb3437bcc1374e039ac8c4dda15f5-physics.jpg?w=510)

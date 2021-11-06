@@ -7,7 +7,7 @@ categories:
 tags: 
   - "Fourier Transform"
   - "Mathematics"
-permalink: /2020-11-29-the-fourier-transform.md/
+permalink: /the-fourier-transform.md/
 ---
 
 Hello 🖐, I am sorry that you had to wait so long for my next post but the truth is that I had tons of homework from school, and I will do my best to be regular.
