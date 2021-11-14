@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /aboutme.md/
+permalink: /about.md/
 ---
 
 #This is your Editor-in-Chief
