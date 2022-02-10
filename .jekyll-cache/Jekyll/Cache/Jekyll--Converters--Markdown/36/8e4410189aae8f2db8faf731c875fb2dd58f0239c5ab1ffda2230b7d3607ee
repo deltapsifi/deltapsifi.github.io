@@ -1,0 +1,35 @@
+I"�<p>Almost a year ago, in April 2021, Fermilab announced some rather interesting results regarding the <em>anomalous magnetic moment</em> and the <em>g factor</em> of a muon. However, before getting into that, I would like to start from the beginning and in the process, familiarise you readers with the terminology.</p>
+
+<p>The <strong>Magnetic Dipole Moment</strong> of a magnetic material refers to its magnetic strength and orientation. This could be produced by the movement of charges such as in a current carrying wire or by the spin angular momentum which is an intrinsic property of elementary particles.</p>
+
+<p>Now, remember the <strong>Stern-Gerlach Experiment</strong>…………….yes that one, the one I talked about in the Quantum Superposition article. [put link]
+So the year was 1922, and the Stern-Gerlach experiment was to prove the quantisation of space and later went on to give proof of the spin of particles. Remember this was the time when there was no such thing as the “spin angular momentum”.</p>
+
+<p>Following is the arrangement of the experiment:</p>
+
+<p><img src="/assets/img/stg.jpg" alt="" /></p>
+
+<p>In the experiment, an oven was taken which produced a beam of silver atoms and these atoms were directed to pass through a non uniform magnetic field. The reason for taking a non uniform magnetic field was that in a uniform magnetic field the net torque on the atom would add up to 0 which would not cause any deflection. Finally these deflections would be detected on an observation screen.</p>
+
+<p>The expected outcome of the experiment was that due to random thermal effects in the oven, the magnetic moment vectors of the atoms would be randomly oritented and there would be a continuous spread of the magnetic moments, ranging from \(-\mu\) to \(\mu\). 
+Instead, what was found was that the silver atoms arrived on the screen at only two points that corresponded to magnetic moments of</p>
+
+\[\mu _z = \pm \mu _B\]
+
+\[\mu _B = \frac{e \hbar}{2m_e}\]
+
+<p>where \(\mu _B\) is Bohr Magneton.</p>
+
+<p>A few years later, Uhlenbach and Goudsmit proposed that electron possessed an intrinsic spin and that in the silver atom the net angular momentum is 0 and the sole source of any magnetic moment is due to the intrinsic spin of the 47th unpaired electron in a silver atom.</p>
+
+<p>This magnetic moment is given by :</p>
+
+\[\mu _S = - \frac{e}{2m_e}gS\]
+
+<p>where \(m_e\) and −e are the mass and charge of the electron, S is the spin angular momentum of the electron, and g is the so-called gyromagnetic ratio, which classically is exactly equal to one, but is known (both from measurement and as derived from relativistic quantum mechanics) to be approximately equal to 2 for an electron.</p>
+
+<p>You might notice that this is similar to the relation between magetic moment and angular momentum in the classical sense \(\mu = \frac{q}{2m}L\) where L is angular momentum, but It turns out that the classical result is off by a proportional factor for the spin magnetic moment.</p>
+
+<p>Now this is where the <strong>g factor</strong> comes in. What is this “g factor”?
+In simple terms, the SI unit of the gyromagnetic ratio is \(rad⋅s^{−1}⋅T^{−1}\) and on the other hand the g factor is dimensionless.</p>
+:ET
